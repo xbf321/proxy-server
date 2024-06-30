@@ -1,0 +1,14 @@
+{
+  "name": "proxy-server",
+  "scripts": {
+    "dev": "tsx watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "http-proxy": "^1.18.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.1"
+  }
+}
