@@ -15,5 +15,6 @@ const server = http.createServer((req, res) => {
     proxy.web(req, res, { target });
 });
 
-server.listen(process.env.PORT || 3721);
-console.info('Start listen');
+const port = process.env.PORT || 3721;
+server.listen(port);
+console.info(`Start listen ${port}`);
