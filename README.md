@@ -33,5 +33,7 @@ http://server/[path] -> [domain]/[path]
 ```bash
 docker build --no-cache -t xbf321/proxy-server .
 docker push xbf321/proxy-server:latest
-docker run -d -p 3721:3721 -e PORT=3721 -e LOG_CENTER_SERVER_API=API --restart unless-stopped  --name proxy-server xbf321/proxy-server:latest
+docker run -d -p 3721:3721 -e PORT=3721 -e LOG_CENTER_SERVER_API=http://log-collector/proxy-server.log --restart unless-stopped  --name proxy-server xbf321/proxy-server:latest
+# 进入容器内部
+docker exec -it proxy-server /bin/bash
 ```
