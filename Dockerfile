@@ -6,7 +6,6 @@ WORKDIR /root/app
 
 COPY . /root/app/
 
-# RUN npm install pm2 -g --registry=https://registry.npmmirror.com
 RUN npm install --registry=https://registry.npmmirror.com
 
 
@@ -15,5 +14,4 @@ ENV NODE_ENV=production
 
 EXPOSE 3721
 
-# CMD [ "pm2-runtime", "start", "npm", "--", "start" ]
 CMD [ "npm", "start" ]
